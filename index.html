@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N&M Solutions - Cloud e Inteligencia Artificial</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="logo">
+            <img src="/assets/logo-2.JPG" alt="N&M Solutions" width="150">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#services">Servicios</a></li>
+            <li><a href="#about">Nosotros</a></li>
+            <li><a href="#solutions">Soluciones</a></li>
+            <li><a href="#contact">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="hero"
+        style="background-image: url(/assets/DALL·E\ 2025-03-08\ 22.37.07.png); background-repeat: no-repeat; background-position: center;">
+        <div class="hero-content">
+            <h2>Transforma tu negocio con Cloud e Inteligencia Artificial</h2>
+            <p>Ofrecemos soluciones personalizadas para mejorar la eficiencia y el rendimiento de tu empresa.</p>
+            <button class="primary-btn" onclick="scrollToSection('services')">Nuestros Servicios</button>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Servicios que ofrecemos</h2>
+            <div class="service-cards">
+                <div class="card">
+                    <h3>Consultoría en Cloud</h3>
+                    <p>Migramos y optimizamos tu infraestructura en la nube.</p>
+                </div>
+                <div class="card">
+                    <h3>Inteligencia Artificial</h3>
+                    <p>Automatizamos procesos y mejoramos decisiones con IA.</p>
+                </div>
+                <!-- <div class="card">
+                    <h3>Soporte y Mantenimiento</h3>
+                    <p>Garantizamos el funcionamiento óptimo de tus sistemas Cloud e IA.</p>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>Sobre Nosotros</h2>
+            <p>Somos un equipo de expertos en tecnología dedicados a la transformación digital de empresas.</p>
+        </div>
+    </section>
+
+    <!-- Solutions Section -->
+    <section id="solutions" class="aws-section">
+        <div class="aws-container">
+            <div class="aws-card solutions-card">
+                <h2>Soluciones</h2>
+                <ol>
+                    <li><strong>Modernización de Aplicaciones:</strong> Contenedores, microservicios y despliegue
+                        automatizado.</li>
+                    <li><strong>Inteligencia Artificial:</strong> Amazon SageMaker y otras soluciones avanzadas.</li>
+                    <li><strong>APIs y Aplicaciones:</strong> Gestión de APIs con Amazon API Gateway.</li>
+                    <li><strong>Bases de Datos:</strong> Amazon RDS, DynamoDB y Redshift.</li>
+                    <li><strong>Nube de Datos:</strong> Almacenamiento seguro con Amazon S3 y Glacier.</li>
+                    <li><strong>Transformación Digital:</strong> Ambientes híbridos y multinube con máxima seguridad.
+                    </li>
+                    <li><strong>Seguridad:</strong> IAM, GuardDuty y KMS para proteger tus datos.</li>
+                    <li><strong>Analíticas Inteligentes:</strong> Athena, EMR y QuickSight para análisis de datos.</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <section id="aws-services" class="aws-section">
+        <div class="aws-container">
+            <div class="aws-card">
+                <figure class="aws-image">
+                    <img src="https://multicloud-x.com/wp-content/uploads/2024/01/AWS-Emblem.png" alt="AWS Emblem">
+                </figure>
+                <div class="aws-text">
+                    <p>Amazon Web Services (AWS) ofrece una amplia gama de servicios en la nube para almacenamiento, IA
+                        y más.</p>
+                    <a class="aws-button" href="https://multicloud-x.com/amazon-web-services/">Leer Más</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="success-cases" class="success-cases">
+        <h2>Casos de Éxito</h2>
+        <div class="cases-container">
+            <div class="case-card">
+                <img src="/assets/logo-2.JPG" alt="Caso de éxito 1">
+                <p>Optimización de infraestructura cloud para una fintech líder, reduciendo costos en un 30%.</p>
+            </div>
+            <div class="case-card">
+                <img src="/assets/logo-2.JPG" alt="Caso de éxito 2">
+                <p>Implementación de inteligencia artificial en un ecommerce, mejorando la personalización en un 50%.
+                </p>
+            </div>
+            <div class="case-card">
+                <img src="/assets/logo-2.JPG" alt="Caso de éxito 3">
+                <p>Desarrollo de una arquitectura escalable en AWS para una startup tecnológica.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+     <div>
+         <section id="contact" class="contact">
+             <div class="container">
+                 <h2>Contacto</h2>
+                 <form id="contactForm">
+                     <label for="name">Nombre</label>
+                     <input type="text" id="name" placeholder="Tu nombre" required>
+                     <label for="email">Correo Electrónico</label>
+                     <input type="email" id="email" placeholder="Tu correo" required>
+                     <button class="primary-btn" type="submit">Enviar</button>
+                 </form>
+             </div>
+             <section>
+                <div>
+                    <img src="/assets/logo-2.JPG" alt="">
+                </div>
+                 
+             </section>
+         </section>
+     </div>
+
+    <!-- Chatbot -->
+    <!-- Botón del Chatbot -->
+    <button id="chatbot-btn" onclick="toggleChatbot()">🤖</button>
+
+    <!-- Ventana del Chat -->
+    <div id="chatbot-window" class="hidden">
+        <div id="chatbot-header">
+            Nymbot 🤖 <button onclick="toggleChatbot()">✖</button>
+        </div>
+        <div id="chatbot-messages"></div>
+        <div style="display: flex; align-items: center;">
+            <input type="text" id="chatbot-input" placeholder="Escribe tu mensaje..." onkeypress="sendMessage(event)">
+            <button id="send-btn" onclick="sendMessage()">Enviar</button>
+        </div>
+    </div>
+
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-info">
+                <p>&copy; 2025 N&M Solutions. Todos los derechos reservados.</p>
+                <a href="mailto:ventas@nym-solutions.cl"> 📩 ventas@nym-solutions.cl</a>
+
+            </div>
+        
+            <div class="footer-social  ">
+                <img class="margin-social-networks" src="/assets/redes-sociales/linkedin.png" alt="linkedin" width="30px" height="30px">
+                <img class="margin-social-networks" src="/assets/redes-sociales/gorjeo.png" alt="X" width="30px" height="30px">
+                <img class="margin-social-networks" src="/assets/redes-sociales/youtube.png" alt="youtube" width="30px" height="30px">
+                <img class="margin-social-networks" src="/assets/redes-sociales/facebook.png" alt="facebook" width="30px" height="30px">
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="chatbot.js"></script>
+</body>
+
+</html>
