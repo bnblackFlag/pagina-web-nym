@@ -40,39 +40,39 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-    const track = document.querySelector(".carousel-track");
-    const testimonials = document.querySelectorAll(".testimonial-card");
-    const dotsContainer = document.querySelector(".carousel-dots");
-    const total = testimonials.length;
-    const visibleCards = 3;
-    let index = 0;
+// document.addEventListener("DOMContentLoaded", function () {
+//     const track = document.querySelector(".carousel-track");
+//     const testimonials = document.querySelectorAll(".testimonial-card");
+//     const dotsContainer = document.querySelector(".carousel-dots");
+//     const total = testimonials.length;
+//     const visibleCards = 3;
+//     let index = 0;
 
-    // Crear puntos dinámicamente
-    for (let i = 0; i < Math.ceil(total / visibleCards); i++) {
-        let dot = document.createElement("button");
-        if (i === 0) dot.classList.add("active");
-        dot.addEventListener("click", function () {
-            index = i;
-            updateCarousel();
-        });
-        dotsContainer.appendChild(dot);
-    }
-    const dots = document.querySelectorAll(".carousel-dots button");
+//     // Crear puntos dinámicamente
+//     for (let i = 0; i < Math.ceil(total / visibleCards); i++) {
+//         let dot = document.createElement("button");
+//         if (i === 0) dot.classList.add("active");
+//         dot.addEventListener("click", function () {
+//             index = i;
+//             updateCarousel();
+//         });
+//         dotsContainer.appendChild(dot);
+//     }
+//     const dots = document.querySelectorAll(".carousel-dots button");
 
-    function updateCarousel() {
-        track.style.transform = `translateX(-${index * 33.33}%)`;
-        dots.forEach((dot, i) => {
-            dot.classList.toggle("active", i === index);
-        });
-    }
+//     function updateCarousel() {
+//         track.style.transform = `translateX(-${index * 33.33}%)`;
+//         dots.forEach((dot, i) => {
+//             dot.classList.toggle("active", i === index);
+//         });
+//     }
 
-    // Cambio automático cada 5 segundos
-    setInterval(function () {
-        index = (index + 1) % Math.ceil(total / visibleCards);
-        updateCarousel();
-    }, 5000);
-});
+//     // Cambio automático cada 5 segundos
+//     setInterval(function () {
+//         index = (index + 1) % Math.ceil(total / visibleCards);
+//         updateCarousel();
+//     }, 5000);
+// });
 
 function calculateSavings() {
     let cost = document.getElementById("cost-input").value;
@@ -92,4 +92,14 @@ window.onscroll = function() {
 // Función para hacer scroll al principio
 function scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    if (section) {
+        window.scrollTo({
+            top: section.offsetTop,
+            behavior: 'smooth'
+        });
+    }
 }
